@@ -6,8 +6,18 @@
 </p>
 
 <p>
+  <strong>Picture:</strong>
+  <%= image_tag(@project.picture, class:"img-responsive") %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @project.description %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @project.link %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

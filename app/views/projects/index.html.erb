@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
-<h1>Listing Projects</h1>
+  <h1>Listing Projects</h1>
 
-<table class="bordered">
+  <!-- <table class="bordered">
   <thead>
     <tr>
       <th>Title</th>
+      <th>Image</th>
       <th>Description</th>
       <th>Link</th>
       <th colspan="3"></th>
@@ -16,17 +17,54 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.title %></td>
+        <td><%= project.picture %></td>
         <td><%= project.description %></td>
-        <td><a href="#"><%= project.link %></a></td>
+        <td><div class="button_wrapper"><a href="<%= project.link %>" class="waves-effect waves-light btn-large" target="_blank">Site officiel <%= project.title %></a></div></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
-<br>
 
-<%= link_to 'New Project', new_project_path %>
+  <div class="row">
+    <% @projects.each do |project| %>
+    <div class="col s4">
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src=".<%= project.picture %>" alt="<%= project.title %>">
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"><%=project.title %>
+          <i class="material-icons right">Clique pour voir la description</i>
+        </span>
+        <p>
+          <div class="button_wrapper">
+            <a class="waves-effect waves-light btn-large" href="<%= project.link %>" target="_blank">Site officiel
+              <%= project.title %></a>
+          </div>
+        </p>
+      </div>
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><%=project.title %>
+          <i class="material-icons right">close</i>
+        </span>
+        <p><%= project.description %></p>
+      </div>
+      <%= link_to 'Show', project %>
+      <%= link_to 'Edit', edit_project_path(project) %>
+      <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+      </div>
+    <% end %>
+  </div>
+
+  <br>
+
+  <%= link_to 'New Project', new_project_path %>
+
+  <br>
+
 </div>

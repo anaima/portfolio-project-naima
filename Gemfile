@@ -49,3 +49,4 @@ group :development do
   gem 'quiet_assets'
 end
 gem 'materialize-sass'
+gem 'carrierwave'
