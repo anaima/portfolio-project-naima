@@ -9,8 +9,13 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1
   # GET /projects/1.json
-  def show
-  end
+  # def show
+  #   @projects = Project.find_by_slug(params[:slug])
+  #
+  #   if @projects.nil?
+  #     redirect_to root_path
+  #   end
+  # end
 
   # GET /projects/new
   def new
@@ -18,8 +23,8 @@ class ProjectsController < ApplicationController
   end
 
   # GET /projects/1/edit
-  def edit
-  end
+  # def edit
+  # end
 
   # POST /projects
   # POST /projects.json
@@ -54,22 +59,22 @@ class ProjectsController < ApplicationController
 
   # DELETE /projects/1
   # DELETE /projects/1.json
-  def destroy
-    @project.destroy
-    respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @project.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
+      @project = Project.find.(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :description, :link, :picture)
+      params.require(:project).permit(:title, :description, :link, :picture, :slug, :id)
     end
 end
