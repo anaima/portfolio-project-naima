@@ -9,13 +9,16 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1
   # GET /projects/1.json
-  # def show
-  #   @projects = Project.find_by_slug(params[:slug])
-  #
-  #   if @projects.nil?
-  #     redirect_to root_path
-  #   end
-  # end
+  def show
+    @project = Project.find(params[:id])
+
+    # @project = Project.joins(:projet)
+    # @project = Project.where('project.slug' => params[:slug_project], 'slug')
+
+    # if @project.nil?
+    #   redirect_to root_path
+    # end
+  end
 
   # GET /projects/new
   def new
@@ -28,9 +31,7 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   # POST /projects.json
-  def create
-    @project = Project.new(project_params)
-
+  def
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -70,11 +71,11 @@ class ProjectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find.(params[:id])
+      @project = Project.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :description, :link, :picture, :slug, :id)
+      params.require(:project).permit(:title, :description, :link, :picture)
     end
 end

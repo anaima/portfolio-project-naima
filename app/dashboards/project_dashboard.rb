@@ -14,7 +14,7 @@ class ProjectDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     link: Field::String,
-    picture: Field::String,
+    picture: CarrierwaveField,
     slug: Field::String,
   }
 
@@ -26,6 +26,7 @@ class ProjectDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :title,
+    :picture,
     :description,
     :created_at,
   ]
@@ -35,11 +36,11 @@ class ProjectDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :title,
+    :picture,
     :description,
     :created_at,
     :updated_at,
     :link,
-    :picture,
     :slug,
   ]
 

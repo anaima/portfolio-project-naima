@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'projects' => 'projects#index'
+  get 'pdf'=>'welcome#pdf'
+  # if i want to personalize or remplace the project's id by the title of projects
+  get 'projects/:slug' => 'projects#show'
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

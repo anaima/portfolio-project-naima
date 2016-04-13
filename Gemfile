@@ -52,7 +52,9 @@ end
 gem 'materialize-sass'
 # upload images
 gem 'carrierwave'
-# pretty url's by slug
-gem 'friendly_id', '~> 5.1.0'
+# # pretty url's by slug
+# gem 'friendly_id', '~> 5.1.0'
 # Administrate admin sys --> in order to add projects
 gem 'administrate', '~> 0.1.5'
+# Variables d'environnement , prod et dev
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
