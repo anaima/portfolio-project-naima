@@ -58,3 +58,4 @@ gem 'carrierwave'
 gem 'administrate', '~> 0.1.5'
 # Variables d'environnement , prod et dev
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+gem 'rmagick', '~> 2.15', '>= 2.15.4'

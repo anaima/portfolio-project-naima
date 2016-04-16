@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   # POST /projects.json
-  def
+  def create
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }

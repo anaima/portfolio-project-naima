@@ -564,7 +564,7 @@
   transition: all .2s ease-out;
 }
 .icon a:hover {
-  background-color: #FC5C00;
+  background-color: #F0514D;
   background-size: 0%;
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
@@ -608,4 +608,25 @@
 .icon--gmail a {
   background-color: #4183c4;
   background-image: url("../img/gplus.png");
+}
+
+/* ########################### MATERIAL ICON HOBBIES #######################*/
+.hobbies-circle {
+  width:130%;
+  height:135%;
+}
+.secondary-content {
+  float:none;
+}
+.btn-floating i {
+  font-size: 3.6rem ;
+  padding-right: 28%;
+  padding-top: 9%;
+}
+.waves-circle {
+  line-height: 15px;
+}
+/* ########################### SECTION De La NAV TAILLE #######################*/
+.section {
+  margin-left: 9px;
 }
