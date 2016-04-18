@@ -2,14 +2,13 @@
 <html>
 <head>
   <title><%= content_for?(:title) ? yield(:title) : "Portfolio" %></title>
-  <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="http://simpleicons.org/" rel="stylesheet">
-
+  <link rel="shortcut icon" href="../img/favicon.ico">
 </head>
 <body>
 
