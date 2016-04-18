@@ -15,6 +15,5 @@
 //= require turbolinks
 //= require_tree .
 //= require materialize-sprockets
-// $(document).ready(function(){
-//   $(".button-collapse").sideNav();
-// });
+
+Turbolinks.enableProgressBar();

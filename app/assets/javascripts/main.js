@@ -1,3 +1,5 @@
+var ready;
+ready = function() {
 /* ######################" TEST CIRCLE PROGESS JS 1er CIRCLE #################*/
 $(function(){
   var $ppc = $('.progress-pie-chart'),
@@ -9,6 +11,9 @@ $(function(){
   $('.ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
   $('.ppc-percents span').html(percent+'%');
 });
+});
+$(document).ready(ready);
+$(document).on('page:load', ready);
 /* ######################## 2nd pourcentage CIRCLE PROGRESS ########################*/
 $(function(){
   var $ppc = $('.progress-pie-chart2'),
@@ -98,5 +103,3 @@ $(window).scroll(function() {
     else
 	$('#returnOnTop').fadeIn();
 });
-
-var creer = $('#flashmessage').html('<%=escape_javascript (render partial: "welcome/creer")%>');

@@ -13,6 +13,11 @@
  */
 @import "materialize";
 
+html.turbolinks-progress-bar::before {
+   background-color: #64EDFF !important;
+   height: 3px !important;
+ }
+
 .progress-pie-chart {
   width: 200px;
   height: 200px;
