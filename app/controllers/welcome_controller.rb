@@ -1,16 +1,24 @@
 class WelcomeController < ApplicationController
   def index
-    @message = Message.new
+
   end
 
 def create
   @message = Message.new message_params
+
+  respond_to do |format|
   if @message.save
-    cookies[:saved_message] = true
-    redirect_to root_path
+    # cookies[:saved_message] = false
+    format.html { redirect_to root_path, notice: "Merci pour votre inscription." }
+    format.js {}
   else
-    redirect_to root_path, alert: "No ! Try again !"
+    format.html { redirect_to root_path, alert: "Message non envoyé ! Réessayez !" }
   end
+end
+end
+
+def pdf
+send_file "#{Rails.root}/public/img/CV.pdf", :type=>"application/pdf", :x_sendfile=>true
 end
 
 private
@@ -19,7 +27,5 @@ def message_params
   params.require(:message).permit(:name, :email)
 end
 
- def pdf
- send_file "#{Rails.root}/public/img/CV.pdf", :type=>"application/pdf", :x_sendfile=>true
- end
+
 end

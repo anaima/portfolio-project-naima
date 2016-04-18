@@ -98,3 +98,5 @@ $(window).scroll(function() {
     else
 	$('#returnOnTop').fadeIn();
 });
+
+var creer = $('#flashmessage').html('<%=escape_javascript (render partial: "welcome/creer")%>');

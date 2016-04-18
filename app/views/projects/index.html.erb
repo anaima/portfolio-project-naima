@@ -1,3 +1,5 @@
+<% content_for :title do %>Projet<% end %>
+
 <!-- Button return On Top -->
 <div id="returnOnTop">
   <img alt="bouton retour en haut" src="img/backtop.png">
@@ -30,7 +32,7 @@
           <span class="card-title text-darken-4" style="color:#F0514D; text-decoration: underline; font-family:bold;"><%= project.title %>
             <i class="material-icons right">close</i>
           </span>
-          <p><%= truncate(project.description, length: 150) %></p>
+          <p><%= truncate(project.description, length: 500) %></p>
         </div>
         <!-- <%= link_to 'Show', project %> -->
         <!-- <%= link_to 'Edit', edit_project_path(project) %> -->
