@@ -226,9 +226,6 @@
       <div class="section">
         <h4 class="left-align">Newsletter</h4>
         <h5 class="left-align">Sign up in my newsletter</h5>
-        <!-- <%  if cookies[:saved_message] %>
-        Thanks for signing up !
-        <% end %> -->
         <div id="notif"></div>
         <%=form_for :message, remote: true do |f| %>
         <%= f.text_field :name, placeholder: "Name" %>

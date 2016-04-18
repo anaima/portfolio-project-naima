@@ -14,18 +14,16 @@ def create
   else
     format.html { redirect_to root_path, alert: "Message non envoyé ! Réessayez !" }
   end
-end
+ end
 end
 
-def pdf
-send_file "#{Rails.root}/public/img/CV.pdf", :type=>"application/pdf", :x_sendfile=>true
-end
+  def pdf
+    send_file "#{Rails.root}/public/img/CV.pdf", :type=>"application/pdf", :x_sendfile=>true
+  end
 
 private
 
-def message_params
-  params.require(:message).permit(:name, :email)
-end
-
-
+   def message_params
+     params.require(:message).permit(:name, :email)
+   end
 end
