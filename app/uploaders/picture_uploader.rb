@@ -48,7 +48,7 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   #Providing a default_url method in your uploader
   def default_url(*args)
-    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "../tobecontinued.jpeg"].compact.join('_'))
+    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "../img/tobecontinued.jpeg"].compact.join('_'))
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

@@ -4,7 +4,14 @@
 </div>
 
 <div class="container">
-
+  <div class="flash">
+    <% if notice %>
+    <%= notice %>
+    <% if alert %>
+    <%= alert %>
+    <% end %>
+    <%end%>
+  </div>
   <!-- section ABOUT ME -->
   <div class="row">
     <div class="col m5 card">
@@ -210,4 +217,23 @@
   </div>
   <!-- ./second row skills -->
 
-</div>
+  <!-- section NEWSLETTER -->
+  <div class="row">
+    <div class="col m12 card">
+      <div class="section">
+        <h4 class="left-align">Newsletter</h4>
+        <h5 class="left-align">Sign up in my newsletter</h5>
+        <%  if cookies[:saved_message] %>
+        Thanks for signing up !
+        <% else %>
+        <%=form_for :message do |f| %>
+        <%= f.text_field :name, placeholder: "Name" %>
+        <%= f.email_field :email, placeholder: "Email" %>
+        <%= f.submit %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+    <!-- /section NEWSLETTER -->
+
+  </div>
