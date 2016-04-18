@@ -5,11 +5,86 @@
   <img alt="bouton retour en haut" src="img/backtop.png">
 </div>
 
-<p id="notice"><%= notice %></p>
 <div class="container">
 
   <h2>My projects (<%= @projects.count %>)</h2>
+  <!-- First Row SLIDE -->
+  <div class="row">
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="../img/Prunierhome.png">
+          <!-- random image -->
+          <div class="caption center-align">
+            <h3 class="black-text text-darken-3">PRUNIER</h3>
+            <h5 class="black-text text-darken-3">Textile</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../img/Prunierproduit.png">
+          <!-- random image -->
+          <div class="caption left-align">
+            <h3 class="black-text text-darken-3">PRUNIER</h3>
+            <h5 class="black-text text-darken-3">Fiche produit</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../img/sportfolio.png">
+          <!-- random image -->
+          <div class="caption right-align">
+            <h3 class="black-text text-darken-3">Sportfolio</h3>
+            <h5 class="black-text text-darken-3">Portfolio Sport</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../img/applirandom.png">
+          <!-- random image -->
+          <div class="caption center-align">
+            <h3 class="orange-text text-darken-2">Application Random</h3>
+            <h5 class="orange-text text-darken-2">Aléatoire</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../img/Prunierproduit2.png">
+          <!-- random image -->
+        </li>
+        <li>
+          <img src="../img/sheetcheatcss.png">
+          <!-- random image -->
+          <div class="caption center-align">
+            <h3 class="black-text text-darken-3">Cheat Sheet</h3>
+          </div>
+        </li>
+        <li>
+          <img src="../img/kidco3.png">
+          <!-- random image -->
+          <div class="caption center-align">
+            <h3 class="black-text text-darken-3">KIDCO</h3>
+            <h5 class="black-text text-darken-3">Site en construction</h5>
+          </div>
+        </li>
+        <li>
+          <img src="../img/kidco2.png">
+          <!-- random image -->
+        </li>
+        <li>
+          <img src="../img/railsapplirandom.png">
+          <!-- random image -->
+        </li>
+        <li>
+          <img src="../img/cheetsheat3.png">
+          <!-- random image -->
+        </li>
+        <li>
+          <img src="../img/crergroupe.png">
+          <!-- random image -->
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- ./END First Row SLIDE -->
 
+  <!-- Second Row SLIDE -->
   <div class="row">
     <% @projects.each do |project| %>
     <div class="col s4 m4">
@@ -34,14 +109,11 @@
           </span>
           <p><%= truncate(project.description, length: 500) %></p>
         </div>
-        <!-- <%= link_to 'Show', project %> -->
-        <!-- <%= link_to 'Edit', edit_project_path(project) %> -->
-        <!-- <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %> -->
       </div>
     </div>
     <% end %>
   </div>
-
+  <!-- Second Row SLIDE -->
   <br>
   <br>
 

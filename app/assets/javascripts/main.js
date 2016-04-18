@@ -99,3 +99,8 @@ $(window).scroll(function() {
     else
 	$('#returnOnTop').fadeIn();
 });
+
+/* ######################## SLIDER PROJECTS #################################*/
+$(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });
