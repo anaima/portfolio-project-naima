@@ -48,6 +48,9 @@ group :development do
   gem 'better_errors'
   gem 'quiet_assets'
 end
+group :production do
+  gem 'rails_12factor'
+end
 # framework grid css
 gem 'materialize-sass'
 # upload images
