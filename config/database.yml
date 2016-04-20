@@ -85,6 +85,6 @@ production:
   <<: *default
   database: Lastportfolio_production
   # username: Lastportfolio
-  # password: <%= ENV['LASTPORTFOLIO_DATABASE_PASSWORD'] %>
+  password: <%= ENV['LASTPORTFOLIO_DATABASE_PASSWORD'] %>
   # password: nana
   # host: localhost
