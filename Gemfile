@@ -47,6 +47,10 @@ group :development do
   gem 'pry'
   gem 'better_errors'
   gem 'quiet_assets'
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
 end
 
 # framework grid css
