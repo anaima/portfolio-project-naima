@@ -51,6 +51,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
 end
 
 # framework grid css
