@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
     root to: "projects#index"
   end
-
+  resources :welcome
   resources :projects
   resources :messages
 
