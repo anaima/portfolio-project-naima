@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   end
 
   resources :projects
-  resources :welcome
   resources :messages
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -16,7 +15,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get 'projects' => 'projects#index'
   get 'pdf'=>'welcome#pdf'
   # if i want to personalize or remplace the project's id by the title of projects
   get 'projects/:slug' => 'projects#show'
